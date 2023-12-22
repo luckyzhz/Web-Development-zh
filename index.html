@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>网站开发学习笔记</title>
+    <link rel="icon" href="_assets/_images/_logos/zhi-logo.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- docsify v4 compressed -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <script defer src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+    <!-- 🎨 custom style -->
+    <!-- Sidebar Catalog Arrow -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1/dist/sidebar.min.css">
+    <style>
+        /* Sidebar Logo */
+        .app-name-link>img:nth-child(1) {
+            max-height: 2em;
+        }
+
+        /* Sidebar Catalog */
+        .sidebar-nav li {
+            font-size: 110%;
+            margin: 0.8em;
+        }
+
+        .sidebar-nav li.active,
+        .sidebar-nav li.open {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 🛠️ docsify configuration -->
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            name: '<img src="_assets/_images/_logos/zhi-logo.svg"><br>Web Development',
+            repo: 'luckyzhz/web-development',
+            loadSidebar: true,
+            subMaxLevel: 3,
+            auto2top: true,
+            formatUpdated: 'Update on: 📅 {YYYY}-{MM}-{DD}T{HH}:{mm}',
+            search: 'auto',
+            executeScript: true,
+            // Plugin option
+            sidebarDisplayLevel: 0, // Sidebar catalog display level
+            tabs: {
+                persist: false,
+                sync: false,
+                theme: 'classic',
+                tabComments: true,
+                tabHeadings: true
+            }
+        }
+    </script>
+
+    <!-- 💊 official plugins -->
+    <!-- Full Text Search -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+    <!-- External Script -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+    <!-- Zoom Image -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+
+    <!-- 💊 third-party plugins -->
+    <!-- Copy Code to Clipboard -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+    <!-- Pagination -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+    <!-- Tabs -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
+    <!-- Sidebar Catalog Expand and Collapse -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1/dist/docsify-sidebar-collapse.min.js"></script>
+    <!-- Prism syntax highlighter -->
+    <script defer src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    <script defer src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+</body>
+
+</html>
