@@ -17,7 +17,7 @@ h1,
 }
 ```
 
-> ❗: 如果选择器列表中的任何一个选择器在语法上无效, 那么整个规则都会被忽略.
+> ❗ 如果选择器列表中的任何一个选择器在语法上无效, 那么整个规则都会被忽略.
 
 ---
 
@@ -122,7 +122,7 @@ h1#heading {
 | `[attr$=value]` | `li[class$="-box"]` | 匹配具有 *attr* 属性的元素, 且该属性值以 *value* 结束. |
 | `[attr*=value]` | `li[class*="box"]`  | 匹配具有 *attr* 属性的元素, 且该属性值含有 *value*.    |
 
-> ⚠️: 如果想以大小写**不**敏感的方式匹配属性值, 可以使用 `i` (表示 ignore) 标志. 例如 `li[class^="a" i]`.
+> ⚠️ 如果想以大小写**不**敏感的方式匹配属性值, 可以使用 `i` (表示 ignore) 标志. 例如 `li[class^="a" i]`.
 
 ---
 
@@ -143,7 +143,7 @@ h1#heading {
 - `:link`
 - `:visited`
 
-> ⚠️: 更多伪类可参考 <https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes>.
+> ⚠️ 更多伪类可参考 <https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes>.
 
 ### 什么是伪元素?
 
@@ -155,7 +155,7 @@ h1#heading {
 - `::before `
 - `::after`
 
-> ⚠️: 更多伪元素可参考 <https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements>.
+> ⚠️ 更多伪元素可参考 <https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements>.
 
 ---
 
@@ -250,7 +250,7 @@ parent child {
 }
 ```
 
-> ❗: 选择器的嵌套是一个较新的 CSS 特性, 目前还没有被广泛支持.
+> ❗ 选择器的嵌套是一个较新的 CSS 特性, 目前还没有被广泛支持.
 
 ---
 
