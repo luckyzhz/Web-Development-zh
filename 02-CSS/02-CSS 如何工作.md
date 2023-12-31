@@ -1,6 +1,6 @@
 # 02-CSS 如何工作
 
-> 浏览器如何解析 CSS 和 HTML 的基础知识.
+> 了解浏览器如何解析 CSS 和 HTML, 以及 CSS 的调试和组织.
 
 ---
 
@@ -17,11 +17,15 @@
 
 ![Rendering process overview](../_assets/_images/rendering.svg ':size=600')
 
+---
+
 ## 关于 DOM
 
 DOM 具有树状结构. 标记语言中的每个**元素**, **属性**和**文本**都会成为树状结构中的一个 [DOM 节点 (node)](https://developer.mozilla.org/zh-CN/docs/Glossary/Node/DOM). 节点由他们与其他节点的关系定义. 有些元素是子节点的父节点, 而子节点又有兄弟节点.
 
 了解 DOM 可以帮助您设计, 调试和维护 CSS, 因为 DOM 是 CSS 与文档内容的交汇处. 当你使用浏览器开发者工具时, 你会浏览 DOM 并选择节点, 以查看他们应用了哪些规则.
+
+---
 
 ## 一个真实的 DOM 案例
 
@@ -48,6 +52,18 @@ P
 └─ SPAN
     └─ "Sheets"
 ```
+
+---
+
+## Debug CSS
+
+参考 <https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS>
+
+---
+
+## 组织 CSS
+
+参考 <https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Organizing>
 
 
 
