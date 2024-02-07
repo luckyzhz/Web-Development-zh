@@ -34,6 +34,6 @@
   * [22-多列布局](02-CSS/22-多列布局.md)
   * [23-媒体查询](02-CSS/23-媒体查询.md)
   * [24-传统布局方法](02-CSS/24-传统布局方法.md)
-  * 
 * 03-JavaScript
+  * [01-如何添加 JavaScript](03-JavaScript/01-如何添加%20JavaScript.md)
   * 
