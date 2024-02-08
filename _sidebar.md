@@ -43,4 +43,5 @@
   * [06-对象原型](03-JavaScript/06-对象原型.md)
   * [07-JavaScript 中的类](03-JavaScript/07-JavaScript%20中的类.md)
   * [08-使用 JSON](03-JavaScript/08-使用%20JSON.md)
+  * [09-异步 JavaScript](03-JavaScript/09-异步%20JavaScript.md)
   * 
