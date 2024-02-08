@@ -1,0 +1,218 @@
+# 07-JavaScript 中的类
+
+> 理解如何使用 JavaScript 提供的特性实现 "经典" 的面向对象编程 (object-oriented programming).
+
+---
+
+## 类和构造函数
+
+JavaScript 中, 类 (class) 其实是前面介绍的用构造器创建对象 (实例) 的语法糖.
+
+使用类时涉及的关键字: `class`, `constructor`, `this`, `new`.
+
+```js
+// 声明一个类
+class Person {
+    name;
+
+    // 构造函数
+    constructor(name) {
+        this.name = name;
+    }
+
+    // 方法
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name}`);
+    }
+}
+
+const giles = new Person("Giles");
+giles.introduceSelf();  // Hi! I'm Giles
+```
+
+### 省略构造函数
+
+如果不需要进行任何特殊的初始化, 可以省略类中的构造函数, JavaScript 会生成一个默认构造函数:
+
+```js
+class Animal {
+    sleep() {
+        console.log("zzzzzzz");
+    }
+}
+
+const spot = new Animal();
+spot.sleep(); // 'zzzzzzz'
+```
+
+---
+
+## 继承
+
+继承 (inheritance) 涉及的关键字: `extends`, `super`
+
+```js
+// Professor 继承自 Person 类
+class Professor extends Person {
+    // 可以在声明构造函数之前列出类的所有成员 (属性或方法) 以增强可读性.
+    // 这步是可选的, 而不是必须的.
+    teaches;
+
+    constructor(name, teaches) {
+        // 用关键字 `super` 调用父类构造函数
+        super(name);
+        this.teaches = teaches;
+    }
+
+    introduceSelf() {
+        console.log(
+            `My name is ${this.name}, and I will be your ${this.teaches} professor.`,
+        );
+    }
+
+    grade(paper) {
+        const grade = Math.floor(Math.random() * (5 - 1) + 1);
+        console.log(grade);
+    }
+}
+
+const walsh = new Professor("Walsh", "Psychology");
+walsh.introduceSelf(); // 'My name is Walsh, and I will be your Psychology professor'
+walsh.grade("my paper"); // some random grade
+```
+
+---
+
+## 封装 (encapsulation)
+
+私有 (private) 属性或方法只能在类的内部访问, 类外不能使用.
+
+### 私有属性
+
+私有属性必须在类里先声明, 且变量名以井号 (`#`) 开头.
+
+```js
+class Student extends Person {
+    // #year 是一个私有属性, 不能在类外访问
+    #year;
+
+    constructor(name, year) {
+        super(name);
+        this.#year = year;
+    }
+
+    introduceSelf() {
+        console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
+    }
+
+    canStudyArchery() {
+        return this.#year > 1;
+    }
+}
+
+const summers = new Student("Summers", 2);
+summers.introduceSelf();    // Hi! I'm Summers, and I'm in year 2.
+summers.canStudyArchery();  // true
+```
+
+### 私有方法
+
+声明私有方法和声明私有属性类似, 也是以井号 (`#`) 开头.
+
+```js
+class Example {
+    #somePrivateMethod() {
+        console.log("You called me?");
+    }
+
+    somePublicMethod() {
+        this.#somePrivateMethod();
+    }
+}
+
+const myExample = new Example();
+myExample.somePublicMethod(); // 'You called me?'
+```
+
+### 静态属性或方法
+
+用关键字 `static` 声明静态成员 (属性或方法). 静态成员属于类本身而不是实例, 所以只能通过类名访问. 静态属性常用于缓存, 固定配置, 或其他实例间共享的数据. 静态方法常用于创建实用 (utility) 函数.
+
+```js
+class Point {
+    x;
+    y;
+
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // 静态属性
+    static displayName = "Point";
+    // 静态方法
+    static distance(a, b) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        return Math.hypot(dx, dy);
+    }
+}
+
+const p1 = new Point(5, 5);
+const p2 = new Point(10, 10);
+// 实例无法访问静态成员
+p1.displayName; // undefined
+p1.distance;    // undefined
+p2.displayName; // undefined
+p2.distance;    // undefined
+
+// 静态成员需要通过类名访问
+console.log(Point.displayName);         // "Point"
+console.log(Point.distance(p1, p2));    // 7.0710678118654755
+```
+
+---
+
+## getter 和 setter
+
+getter 和 setter 类似于计算属性, 使用关键字 `get`, `set` 声明:
+
+```js
+class Rectangle {
+    #width;
+    #height;
+
+    constructor(width, height) {
+        this.#width = width;
+        this.#height = height;
+    }
+
+    // `getter` 可被看作计算属性, 不接受任何参数.
+    get area() {
+        return this.#calcArea();
+    }
+
+    // `setter` 必须恰好接收一个参数.
+    set area(area) {
+        this.#height = area / this.#width;
+    }
+
+    #calcArea() {
+        return this.#width * this.#height;
+    }
+}
+
+const rec = new Rectangle(3, 4);
+
+// 访问 getter 不需要带括号, 就像是一个属性
+console.log(rec.area);  // 12
+
+rec.area = 15;
+console.log(rec.area);  // 15
+```
+
+
+
+---
+
+?> {docsify-updated}

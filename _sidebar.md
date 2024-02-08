@@ -41,4 +41,5 @@
   * [04-事件](03-JavaScript/04-事件.md)
   * [05-JavaScript 对象基础](03-JavaScript/05-JavaScript%20对象基础.md)
   * [06-对象原型](03-JavaScript/06-对象原型.md)
+  * [07-JavaScript 中的类](03-JavaScript/07-JavaScript%20中的类.md)
   * 
