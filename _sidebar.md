@@ -40,4 +40,5 @@
   * [03-数组](03-JavaScript/03-数组.md)
   * [04-事件](03-JavaScript/04-事件.md)
   * [05-JavaScript 对象基础](03-JavaScript/05-JavaScript%20对象基础.md)
+  * [06-对象原型](03-JavaScript/06-对象原型.md)
   * 
