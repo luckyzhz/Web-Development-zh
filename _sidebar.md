@@ -44,4 +44,5 @@
   * [07-JavaScript 中的类](03-JavaScript/07-JavaScript%20中的类.md)
   * [08-使用 JSON](03-JavaScript/08-使用%20JSON.md)
   * [09-异步 JavaScript](03-JavaScript/09-异步%20JavaScript.md)
+  * [10-如何使用 Promise](03-JavaScript/10-如何使用%20Promise.md)
   * 
