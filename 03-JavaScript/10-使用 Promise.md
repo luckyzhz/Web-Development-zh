@@ -1,4 +1,4 @@
-# 10-如何使用 Promise
+# 10-使用 Promise
 
 > 理解在 JavaScript 如何使用 Promise.
 

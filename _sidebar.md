@@ -35,7 +35,7 @@
   * [23-媒体查询](02-CSS/23-媒体查询.md)
   * [24-传统布局方法](02-CSS/24-传统布局方法.md)
 * 03-JavaScript
-  * [01-如何添加 JavaScript](03-JavaScript/01-如何添加%20JavaScript.md)
+  * [01-添加 JavaScript](03-JavaScript/01-添加%20JavaScript.md)
   * [02-实用字符串方法](03-JavaScript/02-实用字符串方法.md)
   * [03-数组](03-JavaScript/03-数组.md)
   * [04-事件](03-JavaScript/04-事件.md)
@@ -44,5 +44,5 @@
   * [07-JavaScript 中的类](03-JavaScript/07-JavaScript%20中的类.md)
   * [08-使用 JSON](03-JavaScript/08-使用%20JSON.md)
   * [09-异步 JavaScript](03-JavaScript/09-异步%20JavaScript.md)
-  * [10-如何使用 Promise](03-JavaScript/10-如何使用%20Promise.md)
+  * [10-使用 Promise](03-JavaScript/10-使用%20Promise.md)
   * 

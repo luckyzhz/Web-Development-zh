@@ -1,4 +1,4 @@
-# 01-如何添加 JavaScript
+# 01-添加 JavaScript
 
 > 学习如何向网页中添加 JavaScript, 及其加载策略.
 
