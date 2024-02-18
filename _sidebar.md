@@ -45,4 +45,5 @@
   * [08-使用 JSON](03-JavaScript/08-使用%20JSON.md)
   * [09-异步 JavaScript](03-JavaScript/09-异步%20JavaScript.md)
   * [10-使用 Promise](03-JavaScript/10-使用%20Promise.md)
+  * [11-实现基于 Promise 的 API](03-JavaScript/11-实现基于%20Promise%20的%20API.md)
   * 
