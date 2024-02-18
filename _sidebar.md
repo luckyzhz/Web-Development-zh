@@ -46,4 +46,5 @@
   * [09-异步 JavaScript](03-JavaScript/09-异步%20JavaScript.md)
   * [10-使用 Promise](03-JavaScript/10-使用%20Promise.md)
   * [11-实现基于 Promise 的 API](03-JavaScript/11-实现基于%20Promise%20的%20API.md)
+  * [12-Worker 简介](03-JavaScript/12-Worker%20简介.md)
   * 
