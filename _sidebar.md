@@ -49,4 +49,5 @@
   * [12-Worker 简介](03-JavaScript/12-Worker%20简介.md)
   * [13-操作文档](03-JavaScript/13-操作文档.md)
   * [14-从服务器获取数据](03-JavaScript/14-从服务器获取数据.md)
+  * [15-绘图](03-JavaScript/15-绘图.md)
   * 
