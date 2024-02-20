@@ -69,16 +69,25 @@
 
 ### 强调 (emphasis)
 
-```html
-<!-- 例如表示讽刺 -->
-<p>I am <em>glad</em> you weren't <em>late</em>.</p>
-```
+元素 `<em>` 表强调.
+
+<p class="codepen" data-height="150" data-default-tab="html,result" data-slug-hash="eYXoyOY" data-editable="true" data-user="luckyzhz" style="height: 150px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/eYXoyOY">
+  &lt;em&gt;</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### 重点 (strong importance)
 
-```html
-<p>This liquid is <strong>highly toxic</strong>.</p>
-```
+元素 `<strong>` 表重点.
+
+<p class="codepen" data-height="150" data-default-tab="html,result" data-slug-hash="GReLypd" data-editable="true" data-user="luckyzhz" style="height: 150px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/GReLypd">
+  Untitled</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ---
 
@@ -97,7 +106,7 @@
 
 ### 文档片段
 
-可以链接到 HTML 文档的特定部分, 即文档片段 (document fragment). 要做到这一点, 首先要为被链接的元素指定一个 `id` 属性. 通常情况下, 链接到一个特定的标题是合理的, 看起来像下面这样:
+可以链接到 HTML 文档的特定部分, 即文档片段 (document fragment). 要做到这一点, 首先要为被链接的元素指定 `id` 属性. 通常情况下, 链接到一个特定的标题是合理的, 看起来像下面这样:
 
 ```html
 <h2 id="Mailing_address">邮件地址</h2>
