@@ -4,6 +4,19 @@
 
 ---
 
+## 通用容器
+
+有时, 我们仅仅想把页面某一部分单独隔离出来, 赋予样式或动作, 而并没有额外的语义. 此时, 我们可以使用通用容器标签 `<div>` (division) 和 `<span>`. 其中, `<div>` 是块级标签, `<span>` 是行内标签. `<div>` 和 `<span>` 通常要设置 `class` 或 `id` 属性, 以便设置对应的 CSS 或 JS.
+
+<p class="codepen" data-height="230" data-default-tab="html,result" data-slug-hash="YzxMyRW" data-editable="true" data-user="luckyzhz" style="height: 230px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/YzxMyRW">
+  通用容器</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+---
+
 ## 标题和段落
 
 有 6 级标题 (heading), 从大到小依次是: `h1`, `h2`, `h3`, `h4`, `h5`, 和 `h6`.
@@ -14,13 +27,12 @@
 
 例如:
 
-```html
-<h1>故事标题</h1>
-
-<p>段落.</p>
-
-<p>另一个段落.</p>
-```
+<p class="codepen" data-height="340" data-default-tab="html,result" data-slug-hash="MWvxRQW" data-editable="true" data-user="luckyzhz" style="height: 340px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/MWvxRQW">
+  标题和段落</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 最佳实践:
 - 每个页面只有一个 `<h1>`: 这是顶级标题, 所有其他标题都应位于其下.
@@ -31,27 +43,25 @@
 
 ## 列表 (list)
 
-列表包括无序列表 (unordered list) 和有序列表 (ordered list). 在一个列表的项 (list item) 里嵌入其他列表也是可以的.
+列表包括无序列表 (unordered list) 和有序列表 (ordered list). 在一个列表项 (list item) 里嵌入其他列表也是可以的.
 
 ### 无序列表
 
-```html
-<ul>
-    <li>牛奶</li>
-    <li>鸡蛋</li>
-    <li>面包</li>
-</ul>
-```
+<p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="dyzrBzP" data-editable="true" data-user="luckyzhz" style="height: 200px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/dyzrBzP">
+  无序列表</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### 有序列表
 
-```html
-<ol>
-    <li>走到路的尽头</li>
-    <li>右转</li>
-    <li>直行穿过前两个交通环岛</li>
-</ol>
-```
+<p class="codepen" data-height="230" data-default-tab="html,result" data-slug-hash="qBXvzRz" data-editable="true" data-user="luckyzhz" style="height: 230px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/qBXvzRz">
+  04-列表（list）_&lt;ol&gt;_2</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ---
 
@@ -76,17 +86,14 @@
 
 ### 使用 title 属性添加辅助信息
 
-当鼠标悬浮在元素上时, title 文本会出现在鼠标旁边.
+当鼠标悬浮在元素上时, `title` 文本会出现在鼠标旁边.
 
-```html
-<p>
-    我创建了一个链接去往
-    <a
-      href="https://developer.mozilla.org"
-      title="了解 Mozilla 使命和贡献方式的最佳途径">
-      Mozilla 主页</a>.
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="rNzRgPd" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/rNzRgPd">
+  超链接 title 属性</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-```
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### 文档片段
 

@@ -51,7 +51,9 @@
 
 ### 图标 (icon)
 
-`<link rel="icon" href="./favicon.svg">`: 元素 `<link>` 可用于指定网页的图标 (icon). 属性 `href` 指向一个相对链接 `./favicon.svg`. 图标 (icon)通常出现在浏览器的标签页中.
+`<link rel="icon" href="./favicon.svg">`: 元素 `<link>` 可用于指定网页的图标 (icon). 属性 `href` 指向一个相对链接 `./favicon.svg`. 图标 (icon) 通常出现在浏览器的标签页中.
+
+> 元素 `<link>` 还可以用于链接其他外部资源, 只要正确设置 `rel` (relationship) 属性即可. 例如引入 CSS 文件: `<link rel="stylesheet" href="main.css">`.
 
 ### 作者和描述
 
@@ -66,6 +68,26 @@
 <meta name="author" content="John">
 <meta name="description" content="这是我的网站开发学习笔记">
 ```
+
+### 基准链接 (base URL)
+
+元素 `<base>` 用于指定文档中所有相对 URL 的根 URL. 如果没有设置 `<base>`, 则 base URL 默认指向当前文件所在目录.
+
+```html
+<head>
+    <!-- 元素 <base> 应放在其他任何属性值是 URL 的元素之前. 因为浏览器是从上往下读 HTML 文档的, 只有获取到了 <base> 信息, 才能正确处理之后的相对链接. -->
+    <!-- 属性 href 指定基准链接 -->
+    <!-- target="_blank" 使得所有链接默认在新窗口打开 -->
+    <base href="http://www.example.com/" target="_blank">
+</head>
+
+<body>
+    <!-- 这个链接会指向 http://www.example.com/#anchor -->
+    <a href="#anchor">锚</a>
+</body>
+```
+
+> ⚠️ 如果想要页面上的链接默认在新标签页打开, 可以设置 `<base target="_blank">`.
 
 
 
