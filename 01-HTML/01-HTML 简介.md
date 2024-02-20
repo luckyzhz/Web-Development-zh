@@ -8,6 +8,8 @@
 
 **HTML** 是 *HyperText Markup Language* 的缩写. HTML 决定了网页的结构 (structure). HTML 使用一系列语义化 (semantic) 的元素 (element) 来描述网页的结构.
 
+为了增强 HTML 的可读性与更好的 SEO (搜索引擎优化), 现在推崇标签的语义化. 例如 `<header>`, `<footer>`, `<article>` 等. 这些标签, 一看就知道用来标记网页的 "头部", "尾部" 以及主体文章部分.
+
 ---
 
 ## HTML 元素剖析
