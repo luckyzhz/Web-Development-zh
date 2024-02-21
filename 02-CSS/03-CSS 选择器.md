@@ -134,6 +134,7 @@ h1#heading {
 
 伪类以冒号开头 (`:`). 下面是一些常用的伪类:
 
+- `:nth-child(an+b)` (n = 0，1，2，3...)
 - `:first-child`
 - `:last-child`
 - `:only-child`
