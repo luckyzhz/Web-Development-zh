@@ -37,6 +37,7 @@
 * 03-JavaScript
   * 00-快速入门
     * [01-基本语法和数据类型](03-JavaScript/00-快速入门/01-基本语法和数据类型.md)
+    * [02-字面量](03-JavaScript/00-快速入门/02-字面量.md)
     * 
   * [01-添加 JavaScript](03-JavaScript/01-添加%20JavaScript.md)
   * [02-实用字符串方法](03-JavaScript/02-实用字符串方法.md)
