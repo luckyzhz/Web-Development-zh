@@ -35,6 +35,9 @@
   * [23-媒体查询](02-CSS/23-媒体查询.md)
   * [24-传统布局方法](02-CSS/24-传统布局方法.md)
 * 03-JavaScript
+  * 00-快速入门
+    * [01-基本语法和数据类型](03-JavaScript/00-快速入门/01-基本语法和数据类型.md)
+    * 
   * [01-添加 JavaScript](03-JavaScript/01-添加%20JavaScript.md)
   * [02-实用字符串方法](03-JavaScript/02-实用字符串方法.md)
   * [03-数组](03-JavaScript/03-数组.md)
