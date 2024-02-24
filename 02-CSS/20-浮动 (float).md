@@ -13,7 +13,7 @@ CSS 属性 `float` 将一个元素浮动到其**所在容器**的左侧或右侧
 - 浮动元素在 z 轴上高于其他普通元素.
 - 后面递补上来的元素的 border 不会意识到有浮动元素存在.
 - **行内元素**会尊重浮动元素的边界, 所以文本会围绕浮动元素.
-- 通常得给浮动元素设置 `width`.
+- 通常需要给浮动元素设置 `width`.
 - 行内元素也可以浮动, 例如 `<img>`.
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOGNzyN" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
