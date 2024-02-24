@@ -10,40 +10,6 @@
 
 ![](../_assets/_images/grid.png ':size=800')
 
-以下是用来演示网格布局的 html 代码:
-
-```html
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        border: 1px red solid;
-    }
-
-    .item {
-        border: 1px blue solid;
-        border-radius: 4px;
-        background-color: aqua;
-        line-height: 2;
-    }
-</style>
-
-<section class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-</section>
-```
-
 ---
 
 ## 在 CSS 中创建网格
@@ -52,25 +18,25 @@
 
 通过设置 `display: grid;` 来定义网格布局. 和弹性盒子 (flexbox) 类似, `display: grid;` 会把容器的所有直接子元素变为 grid 项.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-}
-```
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJqeQmG" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/OJqeQmG">
+  简单的 grid 布局</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-声明 `display: grid;` 会创建一个单列网格. 为了看到更像网格的效果, 我们通过声明 `grid-template-columns: 200px 200px 200px;` 来设置网格为 3 个 200px 的列.
+声明 `display: grid;` 默认会创建一个单列网格. 为了看到更像网格的效果, 我们通过声明 `grid-template-columns: 200px 200px 200px;` 来设置网格为 3 个 200px 的列.
 
 ### 使用单位 fr 定义灵活的网格
 
 单位 `fr` 是 fraction 的缩写, 表示 grid 容器里**可用空间**的一份.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-```
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="WNmqMEN" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/WNmqMEN">
+  简单的 grid 布局</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 现在轨道被等分为 3 列. 还可以指定不同的正值, 例如 `grid-template-columns: 2fr 1fr 1fr;`.
 
@@ -86,27 +52,25 @@
 - `row-gap`: 指定行间空隙.
 - `gap`: 同时指定列间和行间空隙.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 10px;
-}
-```
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QWoXQqb" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/QWoXQqb">
+  简单的 grid 布局</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-间隙属性的值可以是长度或百分比, 但不能用单位 `fr`.
+> ⚠️ 间隙属性的值可以是长度或百分比, 但不能用单位 `fr`.
 
 ### 重复轨道列表
 
 可以用 `repeat()` 函数来重复部分或全部轨道 (track).
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-```
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="rNREJYy" data-editable="true" data-user="luckyzhz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/rNREJYy">
+  grid 重复轨道列表</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 这样会像之前那样得到 3 个 `1fr` 轨道. 传入 `repeat()` 函数的第一个值指定重复次数; 第二个值是一个**轨道列表**, 可以是一个或多个想重复的轨道.
 
@@ -117,16 +81,14 @@
 - **显式网格 (explicit grid)** 通过属性 `grid-template-columns` 或 `grid-template-rows` 创建.
 - **隐式网格 (implicit grid)** 会扩展已定义的显式网格, 当内容超出已有网格时.
 
-默认情况下, 隐式网格的轨道的尺寸是 `auto`, 其大小会根据内容调整. 如果想指定隐式网格的轨道的尺寸, 可以用属性 `grid-auto-rows` 和 `grid-auto-columns`.
+默认情况下, 隐式网格的轨道的尺寸是 `auto`, 其大小会根据内容调整. 如果想指定隐式网格的轨道的尺寸, 可以用属性 `grid-auto-rows` 或 `grid-auto-columns`.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
-    gap: 10px;
-}
-```
+<p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="gOENvdN" data-editable="true" data-user="luckyzhz" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/gOENvdN">
+  grid-auto-rows</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### minmax() 函数
 
@@ -147,20 +109,18 @@
 
 有时我们可能想在 grid 容器里创建尽可能多的列. 这可以通过设置 `grid-template-columns: repeat(auto-fit, 轨道列表);` 实现.  `auto-fit` 表示尽可能重复更多的轨道列表.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-}
-```
+<p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="poYXaqN" data-editable="true" data-user="luckyzhz" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/poYXaqN">
+  grid 自动适应尽可能多的列</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ---
 
 ## 基于线的布局
 
-网格总是有线的. 这些线从 1 开始编号, 且和文档的书写模式 (writing mode) 相关.
+网格总是有线的. 这些线**从 1 开始编号**, 且和文档的书写模式 (writing mode) 相关.
 
 要用这些线来定位项目, 需要指定项目所在网格区域的起止线. 有四个相关属性:
 
@@ -176,37 +136,12 @@
 - `grid-column` 对应 `grid-column-start` 和 `grid-column-end`.
 - `grid-row` 对应 `grid-row-start` 和 `grid-row-end`.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    gap: 10px;
-}
-
-.item:nth-child(1) {
-    /* 用 `-1` 表示最后一条线 */
-    grid-column: 1 / -1;
-    /* 如果只给一个值, 就表示跨度为 1. 这里就相当于 `grid-row: 1 / 2;` */
-    grid-row: 1;
-}
-
-.item:nth-child(2) {
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
-}
-
-.item:nth-child(5) {
-    grid-column: 1;
-    grid-row: 2 / 4;
-}
-
-.item:nth-child(7) {
-    grid-column: 1 / -1;
-    /* 相当于 `grid-row: 6 / 7;` */
-    grid-row: 6;
-}
-```
+<p class="codepen" data-height="450" data-default-tab="html,result" data-slug-hash="rNREJEY" data-editable="true" data-user="luckyzhz" style="height: 450px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/rNREJEY">
+  grid 基于线的布局</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 > ⚠️ 可以用 `-1` 定位最后一根线, `-2` 定位倒数第二根线, 依此类推. 注意, 线的计数从**显式网格**的边缘开始, 而不是隐式网格.
 
@@ -216,60 +151,12 @@
 
 另一种往网格里放置元素的方法是用属性 `grid-template-areas`, 同时要用属性 `grid-area` 给不同的元素赋予相应的名称.
 
-```css
-.container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-auto-rows: minmax(50px, auto);
-    gap: 10px;
-
-    grid-template-areas:
-        "header header"
-        "navigation navigation"
-        "sidebar content1"
-        "sidebar content2"
-        "sidebar content3"
-        "sidebar content4"
-        "footer footer";
-}
-
-.item:nth-child(1) {
-    grid-area: header;
-}
-
-.item:nth-child(2) {
-    grid-area: navigation;
-}
-
-.item:nth-child(3) {
-    grid-area: sidebar;
-}
-
-.item:nth-child(n+4):nth-child(-n+7) {
-    background-color: darksalmon;
-    opacity: 0.5;
-}
-
-.item:nth-child(4) {
-    grid-area: content1;
-}
-
-.item:nth-child(5) {
-    grid-area: content2;
-}
-
-.item:nth-child(6) {
-    grid-area: content3;
-}
-
-.item:nth-child(7) {
-    grid-area: content4;
-}
-
-.item:nth-child(8) {
-    grid-area: footer;
-}
-```
+<p class="codepen" data-height="510" data-default-tab="html,result" data-slug-hash="abMgYzj" data-editable="true" data-user="luckyzhz" style="height: 510px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/luckyzhz/pen/abMgYzj">
+  grid-template-areas</a> by luckyzhz (<a href="https://codepen.io/luckyzhz">@luckyzhz</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 属性 `grid-template-areas` 的使用规则如下:
 
