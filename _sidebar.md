@@ -40,6 +40,7 @@
     * [02-字面量](03-JavaScript/00-快速入门/02-字面量.md)
     * [03-流程控制与错误处理](03-JavaScript/00-快速入门/03-流程控制与错误处理.md)
     * [04-函数](03-JavaScript/00-快速入门/04-函数.md)
+    * [05-箭头函数](03-JavaScript/00-快速入门/05-箭头函数.md)
     * 
   * [01-添加 JavaScript](03-JavaScript/01-添加%20JavaScript.md)
   * [02-实用字符串方法](03-JavaScript/02-实用字符串方法.md)
