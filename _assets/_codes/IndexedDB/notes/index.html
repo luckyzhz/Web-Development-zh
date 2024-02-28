@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB demo - notes</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>IndexedDB demo - notes</h1>
+    </header>
+
+    <main>
+        <section class="note-display">
+            <h2>Notes</h2>
+            <ul></ul>
+        </section>
+
+        <section class="new-note">
+            <h2>Enter a new note</h2>
+            <form>
+                <div>
+                    <label for="title">Note title</label>
+                    <input id="title" type="text" required>
+                </div>
+                <div>
+                    <label for="body">Note text</label>
+                    <input id="body" type="text" required>
+                </div>
+                <div>
+                    <button>Create new note</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
