@@ -70,7 +70,8 @@
 - 05-Web Performance
   - ToDo
 - 06-开发环境
-  - ToDo
+  - [01-命令行基础](06-开发环境/01-命令行基础.md)
+  - 
 - 07.1-Vue 2
   - ToDo
 - 07.2-Vue 3
