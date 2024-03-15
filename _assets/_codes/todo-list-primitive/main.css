@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.todo-list {
+    width: 30rem;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 2px gray;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+li:nth-child(2n + 1) {
+    background-color: rgba(250, 230, 210, 0.5);
+}
+
+li:nth-child(2n + 2) {
+    background-color: rgba(210, 250, 230, 0.5);
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
