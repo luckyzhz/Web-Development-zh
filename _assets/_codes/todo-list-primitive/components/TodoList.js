@@ -1,11 +1,15 @@
+// 导入需要的依赖
 import TodoListItem from "./TodoListItem.js";
 
+// 用全局变量作为 id, 避免 id 重复
 let nextTodoId = 1;
 
 export default {
     components: {
-        TodoListItem,
+        TodoListItem,   // 注册需要用到的组件
     },
+    // 注意 `data` 字段需要用一个函数来返回一个对象.
+    // 因为只有函数能限制作用域, 而组件很可能被多次使用, 要让这些组件的 `data` 互相独立
     data: function () {
         return {
             newTodoText: "",
@@ -20,6 +24,7 @@ export default {
             ],
         };
     },
+    // 在 methods 里如果要用到 `props`, `data`, `computed` 里的量, 需要加 `this.` 前缀
     methods: {
         deleteTodo: function (idToDelete) {
             this.todos = this.todos.filter((todo) => {
@@ -27,6 +32,7 @@ export default {
             });
         },
         addTodo: function () {
+            // 新增的 todo 非空才真正添加
             const trimmedText = this.newTodoText.trim();
             if (trimmedText) {
                 const newTodo = {

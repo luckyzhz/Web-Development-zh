@@ -1,5 +1,6 @@
 export default {
     props: {
+        // 设置自定义属性 `todo` 的类型为 Object, 以及要求必填
         todo: {
             type: Object,
             required: true,
@@ -13,10 +14,13 @@ export default {
     methods: {
         toEditing: function () {
             this.editing = true;
+            // 触发 `toEditing` 时, `<input>` 还没加载到 DOM,
+            // 所以需要等到下一个渲染周期 `nextTick` 再操作 `<input>`
             this.$nextTick(() => {
                 this.$refs.inputField.focus();
             });
         },
+        // 用 `this.$refs.ref值` 索引到元素后, 直接操作该元素
         saveText: function () {
             const editedText = this.$refs.inputField.value.trim();
             if (editedText) {
