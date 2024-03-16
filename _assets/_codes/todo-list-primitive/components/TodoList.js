@@ -6,7 +6,7 @@ let nextTodoId = 1;
 
 export default {
     components: {
-        TodoListItem,   // 注册需要用到的组件
+        TodoListItem, // 注册需要用到的组件
     },
     // 注意 `data` 字段需要用一个函数来返回一个对象.
     // 因为只有函数能限制作用域, 而组件很可能被多次使用, 要让这些组件的 `data` 互相独立
@@ -17,10 +17,10 @@ export default {
                 { id: nextTodoId++, finished: false, text: "Learn Vue" },
                 {
                     id: nextTodoId++,
-                    finished: false,
+                    finished: true,
                     text: "Learn about primitive single-file components",
                 },
-                { id: nextTodoId++, finished: false, text: "Fall in love" },
+                { id: nextTodoId++, finished: false, text: "Fall in love Vue" },
             ],
         };
     },
@@ -45,6 +45,15 @@ export default {
             }
         },
     },
+    // 计算属性也是函数, 不过调用的时候不需要括号 `()`, 即 JavaScript 中的 getter
+    computed: {
+        listSummary: function () {
+            const numberFinishedTodos = this.todos.filter(
+                (todo) => todo.finished
+            ).length;
+            return `${numberFinishedTodos} out of ${this.todos.length} items completed`;
+        },
+    },
     template: `
         <div>
             <input
@@ -53,6 +62,7 @@ export default {
                 @keyup.enter="addTodo"
                 placeholder="New todo (type Enter to add)"
             />
+            <h4>{{ listSummary }}</h4>
             <ul v-if="todos.length">
                 <li
                     is="todo-list-item"
