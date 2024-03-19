@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hello, Vue Router!</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Hello, Vue Router!</h1>
+            <p>
+                <!-- 使用 router-link 组件来导航. -->
+                <!-- 通过传入 `to` 属性指定链接. -->
+                <!-- `<router-link>` 默认会被渲染成一个 `<a>` 标签 -->
+                <router-link to="/foo">Go to Foo</router-link>
+                <router-link to="/bar">Go to Bar</router-link>
+            </p>
+            <!-- 路由出口 -->
+            <!-- 路由匹配到的组件将渲染在这里 -->
+            <router-view></router-view>
+        </div>
+
+        <script type="module">
+            // 0. 导入 Vue 和 VueRouter 模块
+            import Vue from "https://cdn.jsdelivr.net/npm/vue@2/dist/vue.esm.browser.js";
+            import VueRouter from "https://cdn.jsdelivr.net/npm/vue-router@3/dist/vue-router.esm.browser.js";
+            // 使用模块化机制编程, 导入 Vue 和 VueRouter, 要调用 `Vue.use(VueRouter)`
+            Vue.use(VueRouter);
+
+            // 1. 定义 Vue 组件的选项对象.
+            // 也就是说 Foo, Bar 代表了两个 Vue 组件.
+            // 这里只是简单定义了 `template` 字段. 组件也可以从其他地方 import 进来
+            const Foo = { template: "<div>foo</div>" };
+            const Bar = { template: "<div>bar</div>" };
+
+            // 2. 定义路由数组.
+            // 每个路由应该映射一个组件
+            const routes = [
+                { path: "/foo", component: Foo },
+                { path: "/bar", component: Bar },
+            ];
+
+            // 3. 创建 VueRouter 实例.
+            // 传入的选项对象可以有很多字段. 这里只传入最关键的路由数组
+            const router = new VueRouter({
+                routes, // 这是简写, 相当于 `routes: routes,`
+            });
+
+            // 4. 创建和挂载根实例
+            // 记得要通过 router 配置参数注入路由, 从而让整个应用都有路由功能
+            const app = new Vue({
+                router, // 这是简写, 相当于 `router: router,`
+            }).$mount("#app");
+        </script>
+    </body>
+</html>

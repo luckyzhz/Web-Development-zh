@@ -79,6 +79,7 @@
   - [02-核心概念](07.1-Vue%202/02-核心概念.md)
   - [03-原生 Module 实现单文件组件](07.1-Vue%202/03-原生%20Module%20实现单文件组件.md)
   - [04-Vue CLI](07.1-Vue%202/04-Vue%20CLI.md)
+  - [05-Vue Router 3](07.1-Vue%202/05-Vue%20Router%203.md)
   - 
 - 07.2-Vue 3
   - ToDo
