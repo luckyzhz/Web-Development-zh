@@ -1,11 +1,11 @@
 # 04-Vue CLI
 
-> 将[上一篇文章](/07.1-Vue%202/03-原生%20Module%20实现单文件组件.md)中的例子 [TodoList](/_assets/_codes/todo-list-primitive/ ':ignore') 改用 Vue 脚手架实现, 这样模板和 Vue 相关语法才有高亮和提示, 也能实现真正的单文件组件 (文件名以 `.vue` 结尾).
+> 将[上一篇文章](/07.1-Vue%202/03-原生%20Module%20实现单文件组件.md)中的例子 [TodoList](_assets/_codes/todo-list-primitive/ ':ignore') 改用 Vue 脚手架实现, 这样模板和 Vue 相关语法才有高亮和提示, 也能实现真正的单文件组件 (文件名以 `.vue` 结尾).
 
 ---
 
 - 源码: [TodoList-CLI 源码](https://github.com/luckyzhz/Web-Development-zh/tree/main/_assets/_codes/todo-list)
-- 预览: [TodoList-CLI 预览](/_assets/_codes/todo-list/dist/ ':ignore')
+- 预览: [TodoList-CLI 预览](_assets/_codes/todo-list/dist/ ':ignore')
 
 ## 安装
 

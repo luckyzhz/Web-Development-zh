@@ -69,7 +69,7 @@ Vue CLI v5.0.8
 
 Vue Router 的核心思想就是定义**路径**到**组件**的映射, 然后设置**渲染出口** (即在哪里渲染和路径对应的组件). 这样就能把浏览器地址栏不同的 URL 对应到不同组件, 并在恰当的位置渲染出这些组件.
 
-可通过这个最简单的 [Hello, Vue Router!](/_assets/_codes/hello-vue-router/ ':ignore') 来体会其核心概念:
+可通过这个最简单的 [Hello, Vue Router!](_assets/_codes/hello-vue-router/ ':ignore') 来体会其核心概念:
 
 - HTML 模板方面:
   1. 用 `<router-link>` 组件来生成页面上的导航链接, 传入 `to` 属性指定链接地址. `<router-link>` 默认会被渲染成一个 `<a>` 标签.

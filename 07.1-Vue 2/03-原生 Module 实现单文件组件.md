@@ -66,7 +66,7 @@
 
 ## 实例 TodoList
 
-[TodoList 预览](/_assets/_codes/todo-list-primitive/ ':ignore'). [TodoList 源码](https://github.com/luckyzhz/Web-Development-zh/tree/main/_assets/_codes/todo-list-primitive/). 本例实现的功能有:
+[TodoList 预览](_assets/_codes/todo-list-primitive/ ':ignore'). [TodoList 源码](https://github.com/luckyzhz/Web-Development-zh/tree/main/_assets/_codes/todo-list-primitive/). 本例实现的功能有:
 
 - 新增 todo (即待办事项)
 - 编辑已有 todo (会自动聚焦输入框)
